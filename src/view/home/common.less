@@ -1,0 +1,52 @@
+.nav {
+    position: relative;
+    display: flex;
+    font-size: 24px;
+    &::after {
+        width: 100%;
+        height: 2px;
+        background: #C10D0C;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -20px;
+    }
+    a {
+        list-style: none;
+        text-decoration: none;
+        color: #333;
+    }
+    // 确认是子代才给与样式
+    > a {
+        display: flex;
+        margin-right: 20px;
+        &::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url(../../images/this.png) center center / 24px 24px no-repeat;
+        }
+    }
+    .tab {
+        font-size: 14px;
+        line-height: 24px;
+        display: flex;
+        a {
+            color: #666;
+            display: flex;
+            
+        }
+        span {
+            padding: 0 10px;
+        }
+    }
+    .more {
+        position: absolute;
+        right: 20px;
+        a {
+            cursor: pointer;
+            font-size: 16px;
+        }
+    }
+}

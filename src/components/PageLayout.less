@@ -1,0 +1,111 @@
+// 引入公共样式表
+@import '../style/common.less';
+.defaultBackground {
+    background: #333;
+}
+.changeBackground {
+    background: #000;
+}
+.main {
+    background-color: #eee;
+    position: relative;
+}
+header {
+    background: #333;
+    .content {
+        width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        height: 70px;
+        position: relative;
+        .logo {
+            display: flex;
+            // 设置为手型，在ie中存在兼容问题
+            cursor: pointer;
+            ::before {
+                display: block;
+                width: 40px;
+                height: 40px;
+                margin-top: 10px;
+                margin-right: 10px;
+                content: '';
+                background: url(../images/logo.png) center center / 40px 40px no-repeat;
+            }
+            h1 {
+                display: flex;
+                font-size: 24px;
+                line-height: 70px;
+                // 引入的颜色，方便修改
+                color: @paray;
+                margin-right: 20px;
+            }
+        }
+        ul {
+            display: flex;
+            li {
+                cursor: pointer;
+                padding: 0 20px;
+                line-height: 70px;
+                font-size: 16px;
+                font-weight: 100;
+                color: #eee;
+            }
+            li:hover {
+                background: #000;
+            }
+            
+        }
+        
+        .search {
+            position: absolute;
+            display: flex;
+            right: 140px;
+            top: 19px;
+            &::before {
+                position: absolute;
+                top: 7px;
+                left: 10px;
+                display: block;
+                content: '';
+                width: 32px;
+                height: 32px;
+                z-index: 99;
+                background: url(../images/search.png) 0px 0px / 20px 20px no-repeat;
+            }
+            input {
+                border: none;
+                outline: none;
+                font-size: 16px;
+                width: 160px;
+                height: 32px;
+                border-radius: 20px;
+                // background: #fff;
+                padding-left: 32px;
+            }
+        }
+        
+    }
+    .footer {
+        height: 35px;   
+        background-color: #C20C0C;
+        border-bottom: 1px solid #a40011;
+        ul {
+            width: 1000px;
+            margin: 0 auto;
+            padding-left: 400px;
+            display: flex;
+            li {
+                cursor: pointer;
+                font-size: 14px;
+                line-height: 36px;
+                padding-right: 60px;
+                color: #fff;
+            }
+        }
+    }
+    .footerLess {
+        height: 4px;
+        background-color: #C20C0C;
+        border-bottom: 1px solid #a40011;
+    }
+}
